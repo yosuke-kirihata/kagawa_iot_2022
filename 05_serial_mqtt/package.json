@@ -1,0 +1,17 @@
+{
+  "name": "serial_sensor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "publish_serial.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dayjs": "^1.11.7",
+    "mqtt": "^4.3.7",
+    "serialport": "^10.5.0"
+  }
+}

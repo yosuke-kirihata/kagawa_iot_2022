@@ -1,6 +1,6 @@
 import mqtt from "mqtt";
 
-import led from "../lib/led.js";
+import led from "./lib/led.js";
 
 const MY_TOPIC = "/kagawa/kosen/rpi";
 const THRESH_PPM = 1500;

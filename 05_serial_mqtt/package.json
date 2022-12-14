@@ -12,6 +12,7 @@
   "dependencies": {
     "dayjs": "^1.11.7",
     "mqtt": "^4.3.7",
+    "rpi-gpio": "^2.1.7",
     "serialport": "^10.5.0"
   }
 }

@@ -8,7 +8,7 @@ const port = new SerialPort({
   parity: "none",
 });
 
-const parser = new ReadlineParser();
+const parser = new ReadlineParser({ delimiter: "\r\n" });
 port.pipe(parser);
 
 parser.on("data", function (data) {

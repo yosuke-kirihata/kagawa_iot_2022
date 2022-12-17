@@ -26,7 +26,7 @@ let device = awsIot.device({
   keyPath: PRIVATE_KEY_PATH,
   certPath: CERT_PATH,
   caPath: ROOTCA_CERT_PATH,
-  clientId: THINGS_NAME,
+  clientId: UUID,
   host: ENDPOINT,
 });
 

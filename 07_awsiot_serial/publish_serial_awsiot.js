@@ -6,10 +6,10 @@ const BASE_CERT_PATH = "../crt/";
 const PRIVATE_KEY_PATH = BASE_CERT_PATH + ""; //ex: hoge-private.pem.key
 const CERT_PATH = BASE_CERT_PATH + ""; //ex: fuga-certificate.pem.crt
 const ROOTCA_CERT_PATH = BASE_CERT_PATH + ""; //ex: AmazonRootCA1.pem
-const THINGS_NAME = "mono";
+const UUID = ""; //ex:01
 const ENDPOINT = ""; //ex: piyo.iot.ap-northeast-1.amazonaws.com
 
-const topic = "/kagawa/kosen/rpi";
+const topic = "/kagawa/kosen/rpi/"+UUID;
 
 const port = new SerialPort({
   path: "/dev/ttyACM0",
@@ -39,9 +39,9 @@ parser.on("data", function (data) {
   if (splited.length !== 3) return;
 
   const message = JSON.stringify({
-    time: dayjs().format("YYYY-MM-DD hh:mm:ss"),
-    temp: splited[1],
-    hum: splited[2],
+    time: dayjs().format("YYYY-MM-DDTHH:mm:ss.SSS"),
+    temperature: splited[1],
+    humidity: splited[2],
     co2: splited[0],
   });
   console.log(message);

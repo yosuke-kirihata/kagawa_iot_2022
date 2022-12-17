@@ -26,7 +26,7 @@ parser.on("data", function (data) {
   if (splited.length !== 3) return;
 
   const message = JSON.stringify({
-    time: dayjs().format("YYYY-MM-DD hh:mm:ss"),
+    time: dayjs().format("YYYY-MM-DDTHH:mm:ss.SSS"),
     temp: splited[1],
     hum: splited[2],
     co2: splited[0],

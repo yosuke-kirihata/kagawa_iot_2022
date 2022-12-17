@@ -12,7 +12,7 @@ const ENDPOINT = ""; //ex: piyo.iot.ap-northeast-1.amazonaws.com
 const topic = "/kagawa/kosen/rpi";
 
 const port = new SerialPort({
-  path: "/dev/ttyUSB0",
+  path: "/dev/ttyACM0",
   baudRate: 115200,
   dataBits: 8,
   stopBits: 1,

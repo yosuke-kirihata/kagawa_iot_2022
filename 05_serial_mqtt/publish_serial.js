@@ -10,7 +10,7 @@ client.on("connect", function () {
 });
 
 const port = new SerialPort({
-  path: "/dev/ttyUSB0",
+  path: "/dev/ttyACM0",
   baudRate: 115200,
   dataBits: 8,
   stopBits: 1,
